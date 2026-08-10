@@ -1,4 +1,36 @@
-# Local GenAI & PSO Prompt Optimization
+# Local GenAI Assistant & Evolutionary Prompt Optimization (PSO)
+
+A complete local Generative AI ecosystem combining an offline **Customer Support AI Assistant** built with **Ollama** and **Streamlit**, alongside a **Nature-Inspired Computing (NIC)** module that uses **Particle Swarm Optimization (PSO)** to automatically optimize LLM prompts.
+
+## 📌 Architectural Overview
+
+This repository demonstrates two core paradigms of modern AI engineering:
+
+1. **Local Privacy-First Execution:** Running `llama3.2:1b` locally via Ollama to guarantee air-gapped data safety without cloud dependencies.
+2. **Automated Prompt Optimization (NIC ~ LLM):** Replacing manual prompt trial-and-error with Particle Swarm Optimization (PSO)—a swarm intelligence algorithm that searches prompt space to optimize model output quality.
+
+   ┌────────────────┐        ┌──────────────────┐        ┌────────────────┐
+   │  Ollama Engine │ ───►   │ Python Controller│ ───►   │ Streamlit UI   │
+   │  (phi3:mini)   │        │ (Agent Pipeline) │        │(User Interface)│
+   └────────────────┘        └──────────────────┘        └────────────────┘
+
+---
+
+## 🚀 Key Modules
+
+### Module 1: Customer Support AI Triage (`01_support_ai_app.py`)
+Utilizes a two-step **Chain-of-Thought** pipeline:
+* **The Analyst:** Extracts customer intent, urgency, sentiment, product, and order details into structured JSON format.
+* **The Writer:** Injects corporate business guidelines and customer analysis to synthesize a professional, empathetic email draft.
+
+### Module 2: Particle Swarm Optimization for Prompts (`02_pso_prompt_optimization.py`)
+Applies Nature-Inspired Swarm Intelligence to prompt engineering:
+* **Particle:** Represents a candidate prompt variation.
+* **Search Space:** All linguistic variations of the prompt instructions.
+* **Fitness Function:** Evaluates generated outputs based on output length and keyword target hits (`FAQ`, `question`, `answer`, `summary`).
+* **Mutation:** Introduces text transformations with a 30% probability to explore new search space trajectories and prevent getting stuck in local optima.
+
+---
 
 A beginner-friendly project that combines **Local Generative AI** with **Nature-Inspired Computing (NIC)**.
 
@@ -169,7 +201,7 @@ You need:
 
 - Python 3.10+
 - Ollama
-- A local LLM such as `phi3:mini`
+- A local LLM such as `llama3.2:1b`
 - Git
 - A web browser
 
@@ -184,7 +216,7 @@ Install Ollama from:
 After installation, download and run the model:
 
 ```bash
-ollama run phi3:mini
+ollama run llama3.2:1b
 ```
 
 Keep Ollama running while using the Python applications.
