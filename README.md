@@ -2,19 +2,75 @@
 
 A complete local Generative AI ecosystem combining an offline **Customer Support AI Assistant** built with **Ollama** and **Streamlit**, alongside a **Nature-Inspired Computing (NIC)** module that uses **Particle Swarm Optimization (PSO)** to automatically optimize LLM prompts.
 
-## 📌 Architectural Overview
+# 📌 Architectural Overview
 
 This repository demonstrates two core paradigms of modern AI engineering:
 
-1. **Local Privacy-First Execution:** Running `llama3.2:1b` locally via Ollama to guarantee air-gapped data safety without cloud dependencies.
-2. **Automated Prompt Optimization (NIC ~ LLM):** Replacing manual prompt trial-and-error with Particle Swarm Optimization (PSO)—a swarm intelligence algorithm that searches prompt space to optimize model output quality.
+1. **Local Privacy-First Execution** — Running `llama3.2:1b` locally via **Ollama** to guarantee air-gapped data safety without cloud dependencies.
+2. **Automated Prompt Optimization (NIC ~ LLM)** — Replacing manual prompt trial-and-error with **Particle Swarm Optimization (PSO)**, a swarm intelligence algorithm that searches the prompt space to optimize model output quality.
 
-   ┌────────────────┐        ┌──────────────────┐        ┌────────────────┐
-   │  Ollama Engine │ ───►   │ Python Controller│ ───►   │ Streamlit UI   │
-   │  (phi3:mini)   │        │ (Agent Pipeline) │        │(User Interface)│
-   └────────────────┘        └──────────────────┘        └────────────────┘
+## 🏗️ System Architecture
+
+```text
+┌────────────────┐        ┌──────────────────┐        ┌────────────────┐
+│  Ollama Engine │ ───►   │ Python Controller│ ───►   │ Streamlit UI   │
+│  (llama3.2:1b) │        │ (Agent Pipeline) │        │(User Interface)│
+└────────────────┘        └──────────────────┘        └────────────────┘
+```
+
+### Components
+
+| Component             | Responsibility                                                 |
+| --------------------- | -------------------------------------------------------------- |
+| **Ollama Engine**     | Runs the local LLM without requiring cloud inference           |
+| **Python Controller** | Orchestrates the agent pipeline and prompt optimization        |
+| **Streamlit UI**      | Provides the user-facing interface                             |
+| **PSO Optimizer**     | Searches and evolves candidate prompts based on fitness scores |
 
 ---
+
+## 📊 Evolutionary Optimization Metrics
+
+The prompt optimization process follows an iterative Particle Swarm Optimization loop:
+
+```text
+=================== Optimization Loop ===================
+
+1. Initializing particles with initial candidate prompts
+2. Evaluating outputs against fitness scoring function
+3. Updating personal best (pBest) and global best (gBest)
+4. Applying string mutation rates to explore prompt variations
+
+=========================================================
+```
+
+### 🔄 Optimization Flow
+
+```text
+Initial Candidate Prompts
+          │
+          ▼
+   ┌───────────────┐
+   │ Fitness Score │
+   └───────┬───────┘
+           │
+           ▼
+     Update pBest
+           │
+           ▼
+     Update gBest
+           │
+           ▼
+    String Mutation
+           │
+           ▼
+   New Prompt Variants
+           │
+           └──────────────► Repeat
+```
+
+The optimizer continuously explores prompt variations while retaining the best-performing candidates, allowing the system to automatically converge toward higher-quality prompts.
+
 
 ## 🚀 Key Modules
 
