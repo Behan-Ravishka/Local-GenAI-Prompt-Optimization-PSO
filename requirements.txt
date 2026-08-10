@@ -1,0 +1,5 @@
+ollama>=0.6.0
+streamlit>=1.32.0
+nest_asyncio>=1.6.0
+pyngrok>=7.4.0
+numpy>=1.26.4
