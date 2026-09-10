@@ -74,7 +74,7 @@ The optimizer continuously explores prompt variations while retaining the best-p
 
 ## 🚀 Key Modules
 
-### Module 1: Customer Support AI Triage (`01_support_ai_app.py`)
+### Module 1: Customer Support AI Triage (`support_ai_app.py`)
 Utilizes a two-step **Chain-of-Thought** pipeline:
 * **The Analyst:** Extracts customer intent, urgency, sentiment, product, and order details into structured JSON format.
 * **The Writer:** Injects corporate business guidelines and customer analysis to synthesize a professional, empathetic email draft.
@@ -85,7 +85,7 @@ Utilizes a two-step **Chain-of-Thought** pipeline:
 
 ---
 
-### Module 2: Particle Swarm Optimization for Prompts (`02_pso_prompt_optimization.py`)
+### Module 2: Particle Swarm Optimization for Prompts (`pso_app.py`)
 Applies Nature-Inspired Swarm Intelligence to prompt engineering:
 * **Particle:** Represents a candidate prompt variation.
 * **Search Space:** All linguistic variations of the prompt instructions.
@@ -239,8 +239,8 @@ Therefore, this project uses a simplified approach where PSO ideas are adapted t
 ```text
 Local-GenAI-Prompt-Optimization-PSO/
 │
-├── 01_support_ai_app.py
-├── 02_pso_prompt_optimization.py
+├── support_ai_app.py
+├── pso_app.py
 ├── requirements.txt
 ├── .gitignore
 ├── README.md
@@ -249,10 +249,10 @@ Local-GenAI-Prompt-Optimization-PSO/
 
 ### Files
 
-**`01_support_ai_app.py`**  
+**`support_ai_app.py`**  
 Customer support AI application.
 
-**`02_pso_prompt_optimization.py`**  
+**`pso_app.py`**  
 PSO-based prompt optimization experiment.
 
 **`requirements.txt`**  
@@ -339,7 +339,7 @@ pip install -r requirements.txt
 Start Streamlit:
 
 ```bash
-streamlit run 01_support_ai_app.py
+streamlit run support_ai_app.py
 ```
 
 Open the address shown in the terminal, normally:
@@ -357,7 +357,7 @@ Enter a customer email and generate a response.
 Run:
 
 ```bash
-python 02_pso_prompt_optimization.py
+python pso_app.py
 ```
 
 The program creates candidate prompts, evaluates them, and searches for a prompt with a better fitness score.
