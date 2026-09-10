@@ -79,12 +79,27 @@ Utilizes a two-step **Chain-of-Thought** pipeline:
 * **The Analyst:** Extracts customer intent, urgency, sentiment, product, and order details into structured JSON format.
 * **The Writer:** Injects corporate business guidelines and customer analysis to synthesize a professional, empathetic email draft.
 
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/Email%20Response%20Generator/screenshot1.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/Email%20Response%20Generator/screenshot2.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/Email%20Response%20Generator/screenshot3.png)
+
+---
+
 ### Module 2: Particle Swarm Optimization for Prompts (`02_pso_prompt_optimization.py`)
 Applies Nature-Inspired Swarm Intelligence to prompt engineering:
 * **Particle:** Represents a candidate prompt variation.
 * **Search Space:** All linguistic variations of the prompt instructions.
 * **Fitness Function:** Evaluates generated outputs based on output length and keyword target hits (`FAQ`, `question`, `answer`, `summary`).
 * **Mutation:** Introduces text transformations with a 30% probability to explore new search space trajectories and prevent getting stuck in local optima.
+
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/PSO%20based%20LLM%20response%20optimizer/screenshot1.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/PSO%20based%20LLM%20response%20optimizer/screenshot2.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/PSO%20based%20LLM%20response%20optimizer/screenshot3.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/PSO%20based%20LLM%20response%20optimizer/screenshot6.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/PSO%20based%20LLM%20response%20optimizer/screenshot7.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/PSO%20based%20LLM%20response%20optimizer/screenshot8.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/PSO%20based%20LLM%20response%20optimizer/screenshot4.png)
+![Screenshot1](https://github.com/Behan-Ravishka/Local-GenAI-Prompt-Optimization-PSO/blob/main/assets/PSO%20based%20LLM%20response%20optimizer/screenshot5.png)
 
 ---
 
